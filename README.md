@@ -1,6 +1,6 @@
-# Prada Sheriff Helper (chrome ext)
+# Robinhood Helper (chrome ext)
 
-> This project is meant to serve as a helper for prada on-call duties.
+> Chrome extension to assist with buy and sell decisions on Robinhood
 
 Created using React + Typscript boilerplate by [@martellaj](https://github.com/martellaj/chrome-extension-react-typescript-boilerplate)
 
