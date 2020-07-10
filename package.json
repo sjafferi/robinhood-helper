@@ -1,0 +1,28 @@
+{
+  "name": "robinhood-helper",
+  "version": "0.0.1",
+  "description": "Chrome extension to assist with buy and sell decisions on Robinhood.",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack -w --config webpack.dev.js"
+  },
+  "author": "Sibtain Jafferi",
+  "devDependencies": {
+    "@types/chrome": "^0.0.119",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "css-loader": "^3.4.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.0.1",
+    "typescript": "^3.8.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
