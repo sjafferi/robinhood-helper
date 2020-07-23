@@ -1,4 +1,4 @@
-import { Message } from "../../constants";
+import { Messages } from "../../constants";
 import { JiraIssue, MessagePayload } from "../../types";
 
 /*
@@ -18,15 +18,15 @@ export const parseIssues = () => {
   const issues: JiraIssue[] = [];
   const issueLinks = getIssueLinks();
   const onFetchIssueSuccess = (issue: JiraIssue) => {
-    chrome.runtime.sendMessage({
-      message: Message.SEND_JIRA_ISSUES,
-      payload: issue,
-    });
+    // chrome.runtime.sendMessage({
+    //   message: Message.SEND_JIRA_ISSUES,
+    //   payload: issue,
+    // });
   };
   const fetchIssue = (idx) => {
     if (idx >= issueLinks.length) {
       chrome.runtime.sendMessage({
-        message: Message.CLOSE_TAB,
+        message: Messages.CLOSE_TAB,
       });
       return;
     }

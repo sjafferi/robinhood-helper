@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   entry: {
     popup: path.join(__dirname, "src/popup/index.tsx"),
-    inject: path.join(__dirname, "src/inject/index.tsx"),
+    inject: path.join(__dirname, "src/inject/index.ts"),
     background: path.join(__dirname, "src/background.ts"),
   },
   output: {

@@ -1,5 +1,5 @@
 import { inject } from "../inject";
-import { Message } from "../../constants";
+import { Messages } from "../../constants";
 import { MessagePayload, JiraIssue } from "../../types";
 import { Widget, TableHeader } from "./Widget";
 
@@ -27,18 +27,20 @@ const injectWidgets = () => {
 };
 
 const handleMessage = (request: MessagePayload, sender) => {
-  switch (request.message) {
-    case Message.RECEIVE_JIRA_ISSUES: {
-      jiraIssues.push(request.payload);
-      injectWidgets();
-      break;
-    }
+  switch (
+    request.message
+    // case Message.RECEIVE_JIRA_ISSUES: {
+    //   jiraIssues.push(request.payload);
+    //   injectWidgets();
+    //   break;
+    // }
+  ) {
   }
 };
 
 export const onOpen = () => {
-  chrome.runtime.sendMessage({
-    message: Message.OPEN_BROKEN_TESTS_JIRA_FILTER,
-  });
+  // chrome.runtime.sendMessage({
+  //   message: Message.OPEN_BROKEN_TESTS_JIRA_FILTER,
+  // });
   chrome.runtime.onMessage.addListener(handleMessage);
 };
